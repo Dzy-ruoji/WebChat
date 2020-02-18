@@ -1,0 +1,8 @@
+a{
+
+	text-decoration:none;
+	color:rgb(13, 150, 196);
+}
+input,textarea,button,select{
+	border:none;
+}

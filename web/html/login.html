@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>用户登录</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+
+</head>
+<body>
+<div class="container" style="width: 400px;">
+    <h2 class="headline" style="font-weight: initial;">用户登录</h2>
+    <form action="/loginServlet" method="post" id="loginForm">
+        <div class="form-group">
+            <label class="mage" for="username">用户名：</label><br>
+            <input class="inputMage" type="text" name="username" id="username" placeholder="请输入用户名"/>
+        </div>
+
+        <div class="form-group">
+            <label class="mage" for="password">密码：</label><br>
+            <input class="inputMage" type="password" name="password"  id="password" placeholder="请输入密码"/>
+        </div>
+
+        <div class="form-inline" style="position:relative;">
+
+            <label class="mage" for="checkcode">验证码：</label>
+            <input class="form-control" type="text" name="checkcode"  id="checkcode" placeholder="请输入验证码" />
+            <a href="javascript:refreshCode()"><img src="/user/checkCode" title="看不清点击刷新" id="img_check" style="position:absolute;right:10%;top:20%;" ></a>
+        </div>
+
+        <div class="form-group" style="text-align: center;">
+            <input class="btn btn btn-primary" type="button" value="登录" onclick="fun();">
+        </div>
+
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <div class="alertMage"></div>
+            <div id="Error_Msg" style="text-align:center;" ></div>
+        </div>
+    </form>
+
+    <div class="register">
+        <p>还无账号?<a href="register.html">立即注册</a></p>
+    </div>
+
+    <div class="forgetPwd">
+        <p><a href="forgetPassword.html"> 忘记密码 </a></p>
+    </div>
+    <!-- 出错显示的信息框 -->
+
+</div>
+
+</body>
+<script src="../js/login.js"></script>
+</html>
