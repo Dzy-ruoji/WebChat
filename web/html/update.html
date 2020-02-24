@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+    <head>
+    	<base href="<%=basePath%>"/>
+        <!-- 指定字符集 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>修改用户</title>
+
+
+    </head>
+    <body>
+        <div class="container" style="width: 400px;">
+        <h3 style="text-align: center;">修改信息</h3>
+        <form action="/updateUserServlet" method="post" id="updateForm">
+          <div class="form-group">
+            <label for="username">用户名：</label>
+            <input type="text" class="form-control" id="username" name="username"  value=""  readonly="readonly" placeholder="请输入用户名" />
+          </div>
+
+          <div class="form-group">
+            <label>性别：</label>
+              <input type="radio" name="gender" value="男" id="man" />男
+                <input type="radio" name="gender" value="女" id="woman"  />女
+          </div>
+
+          <div class="form-group">
+            <label for="name">真实姓名：</label>
+            <input type="text" class="form-control" id="name"  name="name" value="" placeholder="请输入姓名" />
+          </div>
+
+          <div class="form-group">
+                  <label for="birthday">出生日期</label>
+                  <input type="date" name="birthday" id="birthday" value="" placeholder="请输入出生日期">
+          </div>
+
+          <div class="form-group">
+            <label for="telephone">手机号：</label>
+            <input type="text" id="telephone" class="form-control" value="" name="telephone" placeholder="请输入手机号码"/>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email：</label>
+            <input type="text" id="email" class="form-control" name="email"  value="" placeholder="请输入邮箱地址"  readonly="readonly"/>
+          </div>
+
+
+             <div class="form-group" style="text-align: center">
+                <input class="btn btn-primary" type="button" value="提交" onclick="fun();" />
+                 <div style="float: right">
+                     <p><a href="index.html"> 返回 </a></p>
+                 </div>
+             </div>
+        </form>
+        </div>
+    </body>
+
+<script src="../js/update.js"></script>
+</html>

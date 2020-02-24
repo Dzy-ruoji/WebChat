@@ -1,6 +1,8 @@
-package com.waxsb.util;
+package com.waxsb.util.test;
 
-/*
+
+import java.io.*;
+import java.util.Scanner;
 
 public class UploadFile {
     public static void main(String[] args) throws IOException {
@@ -10,13 +12,10 @@ public class UploadFile {
         System.out.println(path);
         //2.定义一个方法，用来判断要上传的用户头像已经存在，上传失败
         boolean flag = isExists(path.getName());
-        //3.如果存在，提示：该用户头像已经存在，上传成功
-        if(flag){
-             System.out.println("该用户头像已经存在，上传失败");
-        }else{
-            //4.如果不存在，就上传该用户头像，并提示上传成功
-            uploadFile(path);
-        }
+        //上传头像
+        uploadFile(path);
+
+
 
     }
 
@@ -52,15 +51,18 @@ public class UploadFile {
         File file = new File("lib");
         //2.获取lib文件夹中所有的文件的名称数据
         String[] names = file.list();
+
         //3.遍历第二步获取到的数据，用获取到的数据依次和path进行
         for(String name:names){
+            String id = name.substring(0, name.lastIndexOf("."));
+
             if(name.equals(path)){
-                //4.如果一致，说明该用户的头像已经存在了，就返回true
+                //4.如果一致，说明该用户的头像已经存在了，需要覆盖
                 return true;
             }
         }
         return false;
-        //5.如果不一致，说明该用户头像存在，直接返回false
+        //5.如果不一致，说明该用户头像不存在
     }
 
     //定义方法，用来上传具体的用户头像
@@ -83,4 +85,3 @@ public class UploadFile {
          System.out.println("上传成功！");
     }
 }
-*/

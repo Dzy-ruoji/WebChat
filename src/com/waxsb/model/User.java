@@ -11,6 +11,7 @@ public class User {
     private String gender;//男或女
     private String telephone;//手机号
     private String email;//邮箱
+    private String src;//头像
     //private String status;//激活状态，Y代表激活，N代表未激活
 
 
@@ -76,5 +77,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSrc() {
+        return src;
+    }
+
+    public void setSrc(String src) {
+        this.src = src;
     }
 }

@@ -26,4 +26,10 @@ public interface UserDao {
     int findTotalCount(Connection conn);
 
     List<User> findByPage(Connection conn, int start, int rows);
+
+    User updatePassword(Connection conn, int id, String newPassword);
+
+    User updateMessageByUsername(Connection conn,User user);
+
+    void updateImg(Connection conn, int id, String image_src);
 }

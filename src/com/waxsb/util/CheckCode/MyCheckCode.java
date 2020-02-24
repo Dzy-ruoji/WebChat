@@ -1,7 +1,7 @@
 package com.waxsb.util.CheckCode;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.waxsb.util.Json.GetJson;
+import com.waxsb.model.User;
+import com.waxsb.util.Json.MyJson;
 import com.waxsb.util.Json.ResultInfo;
 import net.sf.json.JSONObject;
 
@@ -36,7 +36,7 @@ public class MyCheckCode {
         //填充图片
         g.fillRect(0,0, width,height);
 
-        //产生4个随机验证码，12Ey
+        //产生4个随机验证码，
         String checkCode = getCheckCode();
         //将验证码放入HttpSession中
         req.getSession().setAttribute("CHECKCODE_SERVER",checkCode);
@@ -53,6 +53,42 @@ public class MyCheckCode {
         //参数二：图片的格式，如PNG,JPG,GIF
         //参数三：图片输出到哪里去
         ImageIO.write(image,"PNG",resp.getOutputStream());
+    }
+
+    public static void RespondMailCheckCode(HttpServletRequest req,HttpServletResponse resp) throws IOException {
+        //产生4个随机验证码，
+        String checkCode = getCheckCode();
+        //将验证码放入HttpSession中
+        req.getSession().setAttribute("CHECKCODE_SERVER",checkCode);
+        System.out.println("test：发送给邮箱的验证码为："+checkCode);
+        User user=(User)req.getSession().getAttribute("user");
+        String email=null;
+        if(user==null){
+            //没有user说明在注册页面，注册时需要读取表格中的邮箱，获取地址,前端页面也需要修改
+            JSONObject json = MyJson.getJson(req);
+             email = (String)json.get("email");
+             System.out.println("注册email="+email);
+        }else {
+            email=user.getEmail();
+            System.out.println("修改email="+email);
+        }
+
+        boolean flag=false;
+        try {
+           flag = MailUtils.sendMail(email, "您的验证码为" + checkCode, "修改密码");
+      }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("邮箱格式不正确");
+      }
+
+
+        ResultInfo resultInfo;
+        if(checkCode!=""&&checkCode!=null&&flag==true){
+             resultInfo = ResultInfo.ResponseSuccess("发送成功，请至邮箱查看验证码");
+        }else{
+            resultInfo=ResultInfo.ResponseFail("发送失败");
+        }
+        MyJson.returnJson(resultInfo,resp);
     }
 
     //产生4位随机字符串
@@ -72,25 +108,23 @@ public class MyCheckCode {
         return sb.toString();
     }
 
+
     public static JSONObject JudCheckCode(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        JSONObject jsonObject = GetJson.getJson(req);
+        JSONObject jsonObject = MyJson.getJson(req);
+        req.setCharacterEncoding("utf-8");
         //获取json对象
         String checkcode = (String) jsonObject.get("checkcode");
         //从session中获取验证码
         HttpSession session = req.getSession();
         String checkcode_server =(String) session.getAttribute("CHECKCODE_SERVER");
+        System.out.println(checkcode_server);
         //比较，返回的时候验证码为空，会报异常
         if(!checkcode_server.equalsIgnoreCase(checkcode)){
-            ResultInfo resultInfo = new ResultInfo();
-            ObjectMapper mapper = new ObjectMapper();
-            resultInfo.setFlag(false);
-            resultInfo.setErrorMsg("验证码错误");
-            String json = mapper.writeValueAsString(resultInfo);
-            resp.setContentType("application/json;character=utf-8");
-            resp.setCharacterEncoding("utf-8");
-            resp.getWriter().write(json);
+            ResultInfo resultInfo = ResultInfo.ResponseFail("验证码错误");
+            MyJson.returnJson(resultInfo,resp);
             return null;
         }else {
+
             return jsonObject;
         }
     }

@@ -14,7 +14,6 @@ public class BaseServlet extends HttpServlet {
 
         String uri = request.getRequestURI();
         String requestName = uri.substring(uri.lastIndexOf("/") + 1);
-
         try {
 
             // 获取指定类的字节码对象

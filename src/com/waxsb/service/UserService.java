@@ -9,4 +9,11 @@ public interface UserService {
     User login(User user) ;
 
     PageBean<User> findUserByPage(String currentPage, String row);
+
+
+    User updatePassword(User user, String newPassword);
+
+    User updateMessage(User user);
+
+    void updateImg(int id, String image_src);
 }

@@ -16,7 +16,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
     @Override
     public void deleteById(Connection conn, int id) {
-        String sql="delete from customers where id=?";
+        String sql="delete from User where id=?";
         update(conn,sql,id);
     }
 
@@ -63,7 +63,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
     @Override
     public int findTotalCount(Connection conn) {
         String sql="select count(*) from user";
-        int count = getInstance(conn, Integer.class, sql);
+        int count = Integer.parseInt(getValue(conn,sql).toString());
         return count;
     }
 
@@ -73,4 +73,30 @@ public class UserDaoImpl extends BaseDao implements UserDao {
         List<User> forList = getForList(conn, User.class,sql,start,rows);
         return forList;
     }
+
+    @Override
+    public User updatePassword(Connection conn, int id, String newPassword) {
+        String sql="update user set password=? where id=?";
+        update(conn,sql,newPassword,id);
+
+         sql="select *from user where id=?";
+        return getInstance(conn, User.class, sql, id);
+    }
+
+    @Override
+    public User updateMessageByUsername(Connection conn, User user) {
+        String sql="update user set gender=?,name=?,birthday=?,telephone=? where username=?";
+        update(conn,sql,user.getGender(),user.getName(),user.getBirthday(),user.getTelephone(),user.getUsername());
+        sql="select *from user where username=?";
+        user =getInstance(conn, User.class, sql, user.getUsername());
+        return user;
+    }
+
+    @Override
+    public void updateImg(Connection conn, int id, String image_src) {
+        String sql="update user set src=? where id=?";
+        update(conn,sql,image_src,id);
+    }
+
+
 }

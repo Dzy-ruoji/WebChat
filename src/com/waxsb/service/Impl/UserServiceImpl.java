@@ -83,4 +83,47 @@ public class UserServiceImpl implements UserService {
         return pb;
     }
 
+    @Override
+    public User updatePassword(User user, String newPassword) {
+        Connection conn=null;
+        try {
+            conn = JDBCUtils.getConnection();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        user=dao.updatePassword(conn,user.getId(),newPassword);
+        JDBCUtils.closeResource(conn,null);
+
+        return user;
+    }
+
+
+    @Override
+    public User updateMessage(User user) {
+        Connection conn=null;
+        try {
+            conn = JDBCUtils.getConnection();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //因为user是根据前端传回来的数据封装的，所以没有userId,只能根据username来判断
+        user=dao.updateMessageByUsername(conn,user);
+        JDBCUtils.closeResource(conn,null);
+
+        return user;
+    }
+
+    @Override
+    public void updateImg(int id, String image_src) {
+        Connection conn=null;
+        try {
+            conn = JDBCUtils.getConnection();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        dao.updateImg(conn,id,image_src);
+        JDBCUtils.closeResource(conn,null);
+    }
+
+
 }

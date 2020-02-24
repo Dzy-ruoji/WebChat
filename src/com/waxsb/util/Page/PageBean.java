@@ -3,7 +3,6 @@ package com.waxsb.util.Page;
 * 分页对象
 *
 * */
-
 import java.util.List;
 
 public class PageBean<T> {
@@ -63,4 +62,22 @@ public class PageBean<T> {
                 ", rows=" + rows +
                 '}';
     }
+
+    /** 判断当前是否是第一页 */
+    public boolean getIsFirst(){
+        return  currentPage==1;
+    }
+    /** 判断当前是否是最后一页 */
+    public boolean getIsLast(){
+        return  currentPage==totalPage;
+    }
+    /** 上一页 */
+    public Integer getPrevPage(){
+        return  currentPage-1;
+    }
+    /** 下一页 */
+    public Integer getNextPage(){
+        return  currentPage+1;
+    }
+
 }

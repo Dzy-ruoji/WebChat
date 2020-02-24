@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LockHelper {
+
     static Map<String, HttpSession> map=new HashMap<String, HttpSession>();
     public static void putSession(HttpSession session){
         User user=(User)session.getAttribute("user");
