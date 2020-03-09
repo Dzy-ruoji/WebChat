@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这个一个好友测试页面</title>
+</head>
+
+<body>
+    <input type="button" value="查看好友" id="findMyFriend" onclick="findMyFriend();">
+    <input type="button" value="添加好友" id="addFriend" onclick="addFriend();">
+    <input type="button" value="查看请求" id="findFriendRequest" onclick="findFriendReq();">
+    <input type="button" value="查看回应" id="findFriendResponse" onclick="findFriendResp();">
+    <input type="button" value="同意请求" id="agreeReq" onclick="agreeReq();">
+    <input type="button" value="拒绝请求" id="rejectReq" onclick="rejectReq();">
+
+
+    <div class="search">
+        <input type="text" id="MyFriendName" placeholder="清输入要添加的用户名称">
+        <input type="button" value="查询好友"  id="searchMyFriend" onclick="searchMyFriend();">
+    </div>
+</body>
+</html>
+<script>
+    function findMyFriend() {
+        var data;
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("GET", "/friend/getMyFriend?t="+new Date().getTime(), true);
+        xhttp.send();
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                data = JSON.parse(xhttp.responseText);
+                console.log(data);
+                if(data.flag==false){
+                }else{
+                }
+            }
+        }
+    }
+
+    function addFriend() {
+        var jsonObj=new Object();
+       // jsonObj.username=document.getElementById("username").value;
+        jsonObj.username="test";
+
+        var json= JSON.stringify(jsonObj);
+        var data;
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("POST", "/friend/addFriend?t="+new Date().getTime(), true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(json);
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                data = JSON.parse(xhttp.responseText);
+                console.log(data);
+                if(data.flag==false){
+                }else{
+                }
+            }
+        }
+    }
+
+    function findFriendReq() {
+        var data;
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("GET", "/friend/findFriendRequest?t="+new Date().getTime(), true);
+        xhttp.send();
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                data = JSON.parse(xhttp.responseText);
+                console.log(data);
+                if(data.flag==false){
+                }else{
+                }
+            }
+        }
+    }
+
+    function findFriendResp() {
+        var data;
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("GET", "/friend/findFriendResponse?t="+new Date().getTime(), true);
+        xhttp.send();
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                data = JSON.parse(xhttp.responseText);
+                console.log(data);
+                if(data.flag==false){
+                }else{
+                }
+            }
+        }
+    }
+
+    function agreeReq() {
+        var jsonObj=new Object();
+        jsonObj.friend_1="wangwu";
+
+        var json= JSON.stringify(jsonObj);
+        var data;
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("POST", "/friend/agreeReq?t="+new Date().getTime(), true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(json);
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                data = JSON.parse(xhttp.responseText);
+                console.log(data);
+                if(data.flag==false){
+                }else{
+                }
+            }
+        }
+    }
+
+    function rejectReq() {
+        var jsonObj=new Object();
+        jsonObj.friend_1="test";
+
+        var json= JSON.stringify(jsonObj);
+        var data;
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("POST", "/friend/rejectReq?t="+new Date().getTime(), true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(json);
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                data = JSON.parse(xhttp.responseText);
+                console.log(data);
+                if(data.flag==false){
+                }else{
+                }
+            }
+        }
+    }
+
+    function searchMyFriend() {
+        var FriendName=document.getElementById("MyFriendName").value;
+        var jsonObj=new Object();
+        jsonObj.username=FriendName;
+        jsonObj.currentPage=1;
+        jsonObj.row=5;
+
+        var json= JSON.stringify(jsonObj);
+        var data;
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("POST", "/user/findUserBySearchName?t="+new Date().getTime(), true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(json);
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                data = JSON.parse(xhttp.responseText);
+                console.log(data);
+                if(data.flag==false){
+                }else{
+                }
+            }
+        }
+    }
+</script>

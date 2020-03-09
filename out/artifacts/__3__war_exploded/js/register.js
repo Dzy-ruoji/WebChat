@@ -221,4 +221,29 @@ document.getElementById("telephone").onblur=checkTel;
 document.getElementById("birthday").onblur=checkBir;
 
 
+    var check = document.getElementById('check');
+    check.addEventListener('click',function(){
+        this.disabled = 'disabled';
+        var count =30;
+        //获取验证码
+        getCheckCode();
+        var timer = setInterval(function(){
+            check.value = '再次点击获取验证码(' + count +')';
+            check.style.backgroundColor = '#38e';
+            check.style.color = '#fff';
+            count--;
+            if(count<1)
+            {
+                check.style.backgroundColor = "#e1e2e3";
+                check.style.color = '#black';
+                check.value = '点击获取验证码';
+                check.disabled="";
+                //定时器停止
+                clearInterval(timer);
+            }
+        },1000);
+    },false)
+
+
+
 

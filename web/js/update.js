@@ -88,10 +88,10 @@ function checkBir(){
 }
 
 //修改数据
-var jsonObj=new Object();
+
 function fun() {
     if( checkName()&&checkTel()&&checkBir()){
-        console.log("正在调用此方法");
+        var jsonObj=new Object();
         jsonObj.name=document.getElementById("name").value;
         jsonObj.username=document.getElementById("username").value;
         jsonObj.email=document.getElementById("email").value;
@@ -106,6 +106,7 @@ function fun() {
         }
         //将js对象转化成Json对象
         var json= JSON.stringify(jsonObj);
+        console.log(json);
 
         var xhttp;
         if (window.XMLHttpRequest) {
@@ -115,21 +116,20 @@ function fun() {
             xhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
 
-
         xhttp.open("POST", "/user/updateMessage", true);
         //添加HTTP头部
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         //3.发送请求
         xhttp.send(json);
+
         xhttp.onreadystatechange = function() {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
-
                 data = JSON.parse(xhttp.responseText);
                 console.log(data);
                 if(data.flag==false){
-                    document.getElementById("Error_Msg").innerHTML = data.errorMsg;
+                    document.getElementById("error_Msg").innerHTML = data.errorMsg;
                 }else{
-                    alert(data);
+                    alert("接下来要跳回去，我还没想好")
                 }
             }
         }

@@ -25,11 +25,10 @@ function getCheckCode() {
     }
 }
 
-
     var reg_password=/^[^\s]{6,20}$/
     var newPassword;
     var newPassword1;
-//校验密码
+    //校验密码
     function checkPassword(){
         //1.获取密码
         newPassword= document.getElementById("newPassword").value;
@@ -58,7 +57,7 @@ function getCheckCode() {
         return flag;
     }
 
-//校验密码
+    //校验密码
     function checkPassword1(){
         //1.获取密码
         newPassword1= document.getElementById("newPassword1").value;
@@ -73,7 +72,6 @@ function getCheckCode() {
 
         return flag1;
     }
-
 
     //提交时校验
     function fun() {
@@ -122,7 +120,27 @@ function getCheckCode() {
         }
     }
 
-
     document.getElementById("newPassword1").onblur=checkPassword1;
     document.getElementById("newPassword").onblur=checkPassword;
 
+var check = document.getElementById('check');
+check.addEventListener('click',function(){
+    this.disabled = 'disabled';
+    var count =30;
+    //获取验证码
+    getCheckCode();
+    var timer = setInterval(function(){
+        check.value = '再次点击获取验证码(' + count +')';
+        check.style.backgroundColor = '#38e';
+        check.style.color = '#fff';
+        count--;
+        if(count<1)
+        {
+            check.style.backgroundColor = "#e1e2e3";
+            check.style.color = '#black';
+            check.value = '点击获取验证码';
+            check.disabled="";
+            clearInterval(timer);
+        }
+    },1000);
+},false)

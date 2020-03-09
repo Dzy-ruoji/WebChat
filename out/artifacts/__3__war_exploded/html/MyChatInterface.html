@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyChat</title>
+</head>
+<link rel="stylesheet" href="../css/1.css">
+<link rel="stylesheet" href="../css/chat.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/index.css">
+<body>
+    <div class="whole">
+        <div class="applicationList">
+                <button class="button">我</button>
+        </div>
+        <div class="middle">
+            <div class="search">
+                <input class="searchBox" type="text" id="searchName">
+                <button class="searchButton" id="searchQuery" onclick="searchMyFriend();">查询</button>
+            </div>
+    
+            <div class="function">
+                <span id="mesID" >消息通知
+                    <span class="many" id="manySpan">95</span>
+                    </span>
+                <span id="connectsID" class="selected" onclick="getMyFriends()">联系人</span>
+                <span id="groupsID" onclick="getMyGroups()"  style="border-right: 0;">群聊</span>
+            </div>
+
+          <div class="ContactList" id="ContactListDiv">
+              <!--滚动轴应该放在这个div下-->
+              <ul class="messageList" id="messageListUl">
+                  <!--这是一条信息的模板-->
+                  <li class="Contact Template" id="ContactLi">王五
+                      <button>删除</button>
+                      <button>修改</button>
+                      <button>聊天</button>
+                  </li>
+
+                  <li class="Contact Template" id="ContactLi6">王五
+                      <button>删除</button>
+                      <button>修改</button>
+                      <button>聊天</button>
+                  </li>
+
+              </ul>
+
+         </div>
+      </div>
+        <div class="chat" id="chatDiv">
+            <div class="friendName" id="connectNameDiv" >王五</div>
+            <li id="Type" value="?"></li>
+            <div class="ourMessage" id="ourMessageDiv">
+                <div class="other">
+                    <span class="itsName">from王五</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, maiores.</p>
+                </div>
+                <div class="me">
+                    <span class="meName">我</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, maiores.</p>
+                </div>
+                <div class="me">
+                    <span class="meName">我</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, maiores.</p>
+                </div>
+                <div class="other">
+                    <span class="itsName">from王五</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, maiores.</p>
+                </div>
+                <div class="other">
+                    <span class="itsName">from王五</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, maiores.</p>
+                </div><div class="other">
+                    <span class="itsName">from王五</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, maiores.</p>
+                </div><div class="other">
+                    <span class="itsName">from王五</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, maiores.</p>
+                </div>
+            </div>
+
+            <div class="FunctionButton">
+                <div class="emoji">表情</div>
+                <div class="file">文件</div>
+            </div>
+
+            <div class="InputField">
+                <textarea name="" id="inputMessage" cols="30" rows="10"></textarea>
+                <button>发送(Enter)</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--添加好友列表-->
+    <div id="test" style="width: 1200px;margin-left: 345px;margin-top: 0px;position: absolute;top: 90px;background-color: lightblue;height: 550px;">
+        <style>
+            .not{
+                cursor: not-allowed;
+            }
+        </style>
+        <div  class="write">
+            <h2 class="headline" style="text-align: right;"><b style="margin-right: 45%">添加列表</b>
+                <button onclick="document.getElementById('test').style.display='none';" class="searchButton" style="border: 1px solid red;font-size: 18px">关闭</button></h2>
+            <form action="" method="" class="clearfix">
+                <div class="inleft">
+                    <strong>用户名</strong> <input type="text" id="username">
+                    <button id="search">查询</button>
+                </div>
+
+            </form>
+        </div>
+        <!-- 数据展示 开始-->
+        <div class="read">
+            <div class="top" id="dataTable">
+                <ul class="clearfix" id="lif" >
+                    <li>
+                        <label>
+                            <input  class="a-checkbox" id="allchoose" type="checkbox">
+                            <div class="b-checkbox">
+
+                            </div>
+                        </label>
+                    </li>
+                    <li>编号</li>
+                    <li>用户名</li>
+                    <li>姓名</li>
+                    <li>性别</li>
+                    <li>生日</li>
+                    <li>手机号</li>
+                    <li>邮箱</li>
+                    <li>操作</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 数据展示 结束-->
+
+        <!-- 分页条 开始-->
+        <div id="pageBox" class="nav">
+            <a href=""  class="not" >上一页</a>
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="" >下一页</a>
+        </div>
+        <div>
+            <span class="record">共<span id="totalCount"> </span>条记录，共<span id="totalPage"> </span>页</span>
+        </div>
+        <!-- 分页条 结束-->
+    </div>
+    <script src="../js/MyChatInterface.js"></script>
+</body>
+</html>
+<script>
+    document.getElementById("test").style.display = 'none';
+</script>

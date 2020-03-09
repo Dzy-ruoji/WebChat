@@ -10,10 +10,13 @@ public interface UserService {
 
     PageBean<User> findUserByPage(String currentPage, String row);
 
-
     User updatePassword(User user, String newPassword);
 
     User updateMessage(User user);
 
     void updateImg(int id, String image_src);
+
+    User findUserByUsername(String username);
+
+    PageBean<User> findUserBySearchName(String currentPage, String row, String username);
 }

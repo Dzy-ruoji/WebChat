@@ -1,0 +1,15 @@
+Map<String,Map<String,List<SocketMeg>>> messageMap;
+socketMegs meg;
+Map<String,List<SocketMeg> out = messageMap.get(meg.getToUser);
+if(out == null){
+    out = new Map<String,List<SocketMeg>();
+}
+List<SocketMsg> list  = out.get(meg.getFormUser);
+if(list == null){
+    list = new ArrayList<SocketMsg>();
+}
+list.add(meg);
+out.put(meg.getFormUser,list);
+messageMap.out(meg.getToUser,out);
+
+

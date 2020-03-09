@@ -1,0 +1,188 @@
+.whole{
+    width: 1100px;
+    height: 600px;
+    border: 2px solid black;
+    margin: 20px auto;
+    display: flex;
+}
+.applicationList{
+    flex: 1;
+    border-right:2px solid black;
+    text-align: center;
+    padding-top: 20px;
+}
+.applicationList .button{
+    border: 2px solid black;
+    font-size: 24px;
+}
+.middle{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    border-right:2px solid black ;
+    /* background-color: skyblue; */
+}
+.middle .search{
+    flex: 1;
+    text-align: center;
+    line-height: 4;
+    border-bottom: 2px solid black;
+}
+.middle .search .searchBox{
+    border: 2px solid black;
+    font-size: 16px;
+    height: 25px;
+    width: 230px;
+}
+.middle .search .searchBox:focus{
+    border: 2px solid skyblue;
+}
+.middle .search .searchButton{
+    font-size: 20px;
+    border: 2px solid black;
+    line-height: 1;
+    padding: 2px 0;
+}
+.middle .function{
+    flex: 0.8;
+    font-size: 18px;
+    display: flex;
+}
+.middle .function>span{
+    flex: 1;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    text-align: center;
+    line-height: 66px;
+    position: relative;
+}
+.middle .function .many{
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.middle .function .selected{
+    background-color: #ccc;
+}
+.middle .ContactList{
+    /* background-color: #008c8c; */
+    flex: 7;
+    overflow: auto;
+    flex-direction:column;
+}
+.middle .ContactList>ul>li{
+    border-bottom:2px solid black;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    padding-left: 20px;
+    flex-shrink: 0;
+}
+.middle .ContactList>ul>li>button{
+    border: 2px solid black;
+    float: right;
+    font-size: 16px;
+    height: 25px;
+    line-height: 22px;
+    margin-right:10px;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+.chat{
+    flex: 12;
+    display: flex;
+    flex-direction: column;
+}
+.chat .friendName{
+    flex: 1.1;
+    border-bottom:2px solid black ;
+    font-size: 24px;
+    line-height: 2.7;
+    padding-left: 35px;
+    background-color: rgba(238, 237, 237, 0.836);
+}
+.chat .ourMessage{
+    flex: 5.6;
+    overflow: auto;
+    /* background-color: blanchedalmond; */
+    border-bottom:2px solid black ;
+    background-color: rgb(241, 241, 241);
+}
+/* .chat .ourMessage .other{
+    background-color: blanchedalmond;
+} */
+.chat .ourMessage .other .itsName{
+    font-size: 12px;
+    margin-left: 20px;
+}
+.chat .ourMessage .other>p{
+    width: 400px;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fff;
+}
+.chat .ourMessage .me{
+    margin-left: 282px;
+}
+.chat .ourMessage .me .meName{
+    font-size: 12px;
+    margin-left: 375px;
+}
+.chat .ourMessage .me>p{
+    top: 18px;
+    right: 10px;
+    width: 400px;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fff;
+}
+.chat .FunctionButton{
+    flex: 0.7;
+    border-bottom:2px solid black ;
+}
+.chat .FunctionButton .emoji,.chat .FunctionButton .file{
+    text-align: center;
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 20px;
+    height: 20px;
+    width: 50px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.chat .InputField{
+    flex: 1;
+}
+.chat .InputField textarea{
+    resize: none;
+    height: 100px;
+    width: 99%;
+    border: none;
+    font-size: 18px;
+}
+.chat .InputField button{
+    border: 2px solid black;
+    float: right;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height: 27px;
+    width: 120px;
+    cursor: pointer;
+}
+.chat .InputField button:hover{
+    background-color: darkseagreen;
+}

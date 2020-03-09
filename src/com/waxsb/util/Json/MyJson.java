@@ -23,12 +23,13 @@ public class MyJson {
                 return null;
             }
             System.out.println("这是前端传回来的json字符串"+wholeStr);
-            JSONObject jsonObject = JSONObject.fromObject(wholeStr);
+
+    JSONObject jsonObject = JSONObject.fromObject(wholeStr);
             return jsonObject;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+            } catch (IOException e) {
+                e.printStackTrace();
+         }
+               return null;
     }
 
     public static void returnJson(ResultInfo resultInfo, HttpServletResponse resp) throws IOException {

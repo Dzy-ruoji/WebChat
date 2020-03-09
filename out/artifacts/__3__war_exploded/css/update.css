@@ -1,0 +1,64 @@
+a{
+    text-decoration:none;
+}
+input,textarea,button,select{
+    border:none;
+}
+input[type="password"]:focus{
+    background-color: #e1e2e3;
+    outline:#e1e2e3 auto 1px;
+}
+input[type="text"]:focus{
+    background-color: #e1e2e3;
+    outline:#e1e2e3 auto 1px;
+}
+input[type="button"]{
+    margin-left: 15px;
+    padding: 0 8px;
+    height: 25px;
+    border-radius: 5%;
+    border: 1px solid #e1e2e3;
+    font-size: 13px;
+}
+input[type="date"]{
+    border: 1px solid #e1e2e3;
+    height: 22px;
+    margin-left: 10px;
+    padding: 3px 6px 3px 6px;
+    border-radius: 6%;
+}
+
+.container{
+    margin:0 auto;
+    width: 400px;
+ 
+}
+.container .form-group{
+    margin: 10px 0;
+    height: 35px;
+    line-height: 35px;
+}
+.container .form-group>input[type="text"]{
+    border: 1px solid #e1e1e3;
+    padding: 5px 8px;
+    border-radius: 5%;
+    height: 20px;
+    width: 250px;
+}
+.container .form-group .btn{
+    background-color:#38e;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+.container .form-group .back{
+    float: right;
+    font-size: 14px;
+}
+.close{
+    height: 30px;
+    width: 340px;
+    background-color: papayawhip;
+
+}

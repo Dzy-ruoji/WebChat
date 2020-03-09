@@ -1,6 +1,4 @@
 package com.waxsb.util.CheckCode;
-
-
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
@@ -25,7 +23,7 @@ public final class MailUtils {
             final Properties props = new Properties();
             props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.host", "smtp.qq.com");
-         //   props.put("mail.smtp.port","465");
+         // props.put("mail.smtp.port","465");
             props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
             // 发件人的账号
             props.put("mail.user", USER);
@@ -68,13 +66,5 @@ public final class MailUtils {
         }
         return false;
     }
-
-
-  /*  public static void main(String[] args) throws Exception { // 做测试用
-        MailUtils.sendMail("1031316223@qq.com","你好，这是一封测试邮件，无需回复。","测试邮件");
-        System.out.println("发送成功");
-    }*/
-
-
 
 }

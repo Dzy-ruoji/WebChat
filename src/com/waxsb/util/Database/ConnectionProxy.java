@@ -23,7 +23,7 @@ public class ConnectionProxy implements InvocationHandler {
     }
 
     public Connection getProxyConnection() {
-        return proxyConnection;
+        return this.proxyConnection;
     }
 
     public void setProxyConnection(Connection proxyConnection) {
@@ -60,6 +60,7 @@ public class ConnectionProxy implements InvocationHandler {
             myDataSource.closeConnection(this);
             return null;
         }else{
+            //可能有问题，执行的是真实链接
             return  method.invoke(realConnection,args);
         }
 

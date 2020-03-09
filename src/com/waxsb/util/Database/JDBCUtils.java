@@ -1,53 +1,59 @@
 package com.waxsb.util.Database;
 
-import com.waxsb.util.Database.MyDataSource;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class JDBCUtils {
-    private static MyDataSource myDataSource = new MyDataSource();
+    private static MyDataSource myDataSource = new MyDataSource("/jdbc.properties");
 
-    public static Connection getConnection() throws Exception {
-        Connection conn = myDataSource.getConnection();
+    public static Connection getConnection()  {
+
+        Connection conn = null;
+        try {
+            conn = myDataSource.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return conn;
     }
 
+
     public static void closeResource(Connection conn, Statement ps){
-        try {
-            if(ps!=null)
-                ps.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        try {
-            if(conn!=null)
-                conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+      if(ps!=null){
+          try {
+              ps.close();
+          } catch (SQLException e) {
+              e.printStackTrace();
+          }
+      }
+      if(conn!=null){
+          try {
+              conn.close();
+          } catch (SQLException e) {
+              e.printStackTrace();
+          }
+      }
     }
 
-    public static void closeResource(Connection conn, Statement ps,ResultSet rs){
-        try {
-            if(ps!=null)
+    public static void closeResource(Connection conn, Statement ps,ResultSet rs) throws SQLException {
+        if (ps != null) {
+            try {
                 ps.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
-        try {
-            if(conn!=null)
+        if (conn != null) {
+            try {
                 conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
-        try {
-            if(rs!=null)
-                rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (rs != null) {
+            rs.close();
         }
     }
 }

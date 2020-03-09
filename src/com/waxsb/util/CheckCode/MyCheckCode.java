@@ -75,7 +75,7 @@ public class MyCheckCode {
 
         boolean flag=false;
         try {
-           flag = MailUtils.sendMail(email, "您的验证码为" + checkCode, "修改密码");
+           flag = MailUtils.sendMail(email, "您的验证码为" + checkCode, "验证信息");
       }catch (Exception e){
             e.printStackTrace();
             System.out.println("邮箱格式不正确");
@@ -108,7 +108,6 @@ public class MyCheckCode {
         return sb.toString();
     }
 
-
     public static JSONObject JudCheckCode(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         JSONObject jsonObject = MyJson.getJson(req);
         req.setCharacterEncoding("utf-8");
@@ -116,9 +115,13 @@ public class MyCheckCode {
         String checkcode = (String) jsonObject.get("checkcode");
         //从session中获取验证码
         HttpSession session = req.getSession();
-        String checkcode_server =(String) session.getAttribute("CHECKCODE_SERVER");
-        System.out.println(checkcode_server);
+        String checkcode_server = (String) session.getAttribute("CHECKCODE_SERVER");
         //比较，返回的时候验证码为空，会报异常
+        if(checkcode_server==null){
+            ResultInfo resultInfo = ResultInfo.ResponseFail("请输入验证码");
+            MyJson.returnJson(resultInfo,resp);
+            return null;
+        }
         if(!checkcode_server.equalsIgnoreCase(checkcode)){
             ResultInfo resultInfo = ResultInfo.ResponseFail("验证码错误");
             MyJson.returnJson(resultInfo,resp);

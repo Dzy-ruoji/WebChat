@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的信息</title>
+    <link rel="stylesheet" href="../css/showMyself.css">
+</head>
+<body>
+    <div class="headPic">
+        <div class="head"><img id="img" src="../Image/default.jpg" style="display:block;width: 100px; height:120px";></div>
+
+        <!--文件上传对表单的要求：
+        1.提交方式必须为post
+        2.表单中应该指定所提交的请求为multipart请求
+        -->
+
+
+
+    </div>
+    <div class="content">
+        <form  class="form" action="">
+            <input type="file" onchange="uploadFile(this.files, 'process_1');"/><br/>
+            <progress max="100" value="0" id="process_1"></progress><br/>
+
+           <span class="text">用户名：</span> <input type="text" name="" id="username"><br>
+
+           <span class="text">性别：</span> <input type="text" name="gender" id="gender"><br>
+
+           <span class="text">真实姓名:</span><input type="text" name="name" id="name"><br>
+
+           <span class="text">出生日期</span> <input type="text" name="birthday" id="birthday"><br>
+
+           <span class="text"> 手机号：</span><input type="text" name="telephone" id="telephone"><br>
+
+           <span class="text"> 邮箱：</span><input type="text" name="email" id="email">
+        </form>
+    </div>
+
+</body>
+<script src="../js/showMyself.js"></script>
+</html>

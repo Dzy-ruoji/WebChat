@@ -9,22 +9,35 @@ import java.util.List;
 public class MyDataSource extends MyAbstractDataSource {
 
     //空闲连接池
-    private final List<ConnectionProxy> idleConnections =new ArrayList<ConnectionProxy>();
+    private final List<ConnectionProxy> idleConnections = new ArrayList<ConnectionProxy>();
 
     //激活的连接池
-    private final List<ConnectionProxy> activeConnections=new ArrayList<ConnectionProxy>();
+    private final List<ConnectionProxy> activeConnections = new ArrayList<ConnectionProxy>();
 
     //监视器对象
     private final Object monitor = new Object();
 
-    //监视器对象
-    private final Object watch = new Object();
+    public MyDataSource() {
+
+    }
+
+    public MyDataSource(String url, String driver, String user, String password, int poolMaxActiveConnections, int poolMaxIdleConnections, int poolTimeToWait) {
+        super(url, driver, user, password, poolMaxActiveConnections, poolMaxIdleConnections, poolTimeToWait);
+    }
+
+    public MyDataSource(String url, String driver, String user, String password) {
+        super(url, driver, user, password);
+    }
+
+    public MyDataSource(String path) {
+        super(path);
+    }
 
     //覆盖父类方法，返回一个动态代理链接
     @Override
     public Connection getConnection() throws SQLException {
         ConnectionProxy connectionProxy=getConnectionProxy(super.getUser(),super.getPassword());
-        return connectionProxy.getProxyConnection();
+           return connectionProxy.getProxyConnection();
     }
 
     //获取连接
@@ -37,7 +50,8 @@ public class MyDataSource extends MyAbstractDataSource {
             synchronized (monitor){
                //如果空闲连接不为空，那么可以直接获取连接
                 if(!idleConnections.isEmpty()){
-                    connectionProxy=idleConnections.remove(0);
+                    //返回被移除的元素
+                    connectionProxy = idleConnections.remove(0);
                 }else {
                     //没有空闲连接可以使用，那么我们需要获取连接新的连接（创建新连接）
                     if(activeConnections.size()<super.getPoolMaxActiveConnections()){
@@ -45,24 +59,20 @@ public class MyDataSource extends MyAbstractDataSource {
                         connectionProxy=new ConnectionProxy(super.getConnection(),this);
                     }
                         //否则不能创建新连接，需要等待 poolTimeOut
-
                 }
-            }
-
-            if(!wait){
-                wait=true;
-            }
-
-            if(connectionProxy==null){
-                try {
-                    //连接对象是空，需要等待
-                    monitor.wait(super.getPoolTimeToWait());
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                    //万一等待被线程打断，退出循环
-                    break;
+                if(connectionProxy==null){
+                    try {
+                        //连接对象是空，需要等待
+                        monitor.wait(super.getPoolTimeToWait());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                        //万一等待被线程打断，退出循环
+                        break;
+                    }
                 }
+
             }
+
         }
         if(connectionProxy!=null){
             //连接对象不为空，已经拿到连接
@@ -77,7 +87,6 @@ public class MyDataSource extends MyAbstractDataSource {
         synchronized (monitor){
             //关闭连接，把激活状态的连接变成空闲连接
             activeConnections.remove(connectionProxy);
-
             if(idleConnections.size()<super.getPoolMaxIdleConnections()){
                 idleConnections.add(connectionProxy);
             }

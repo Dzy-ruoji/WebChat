@@ -1,5 +1,7 @@
 package com.waxsb.util.Image;
 import java.io.*;
+import java.util.Date;
+
 public  class MyImg {
 
 
@@ -20,23 +22,20 @@ public  class MyImg {
     //根据绝对路径上传图片,根据id修改图片名称
     public static String uploadImage(String src,String realPath,int id) throws IOException {
         File file = getPath(src);
+        if(file==null){
+            //说明该文件不存在
+            return null;
+        }
         //上传时修改名字，返回修改后的字符串
         String image_src = uploadFile(file,realPath,id);
-
         return image_src;
     }
 
 
     //判断绝对路径下的图片是否存在（猜想：可以在前端判断读取的文件）
     public static File getPath(String path){
-        //1.提示用户录入要上传的用户头像路径，并接收
-        while(true){
-
-            //2.判断该路径的后缀名是否是：.jpg .png .bmp
-            //3.如果不是，提示您录入的不是图片
             if(!path.endsWith(".jpg")&&!path.endsWith(".png")&&!path.endsWith("bmp")){
                 System.out.println("您录入的不是图片，请重新录入");
-                continue;
             }
             //4.如果是，判断路径是否存在，并且是否为文件
             File file = new File(path);
@@ -46,23 +45,16 @@ public  class MyImg {
             }else{
                 //.如果不是文件，提示您录入的路径不合法，请重新录入
                 System.out.println("您录入的路径不合法，请重新录入");
-            }
+                return null;
         }
     }
 
     //判断要上传的用户头像，在lib文件中是否存在
     public static boolean isExists(String src,String realPath) throws IOException {
         //1.将lib文件夹封装成File对象
-
-        //绝对路径
-        //File file = new File("S:\\新建文件夹 (3)\\src\\lib");
-       // File file = new File("S:\\新建文件夹 (3)\\src\\com\\waxsb\\util\\Image");
         File file=new File(realPath);
-
         //2.获取lib文件夹中所有的文件的名称数据
         String[] names = file.list();
-            System.out.println(names);
-
             try {
             //3.遍历第二步获取到的数据，用获取到的数据依次和path进行
             for(String name:names){
@@ -90,8 +82,8 @@ public  class MyImg {
         //获取后缀名
         src= src.substring(src.lastIndexOf("."));
         //改名为id名.后缀名
-        src=id+src;
 
+        src=id+src;
         BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(realPath+"\\"+src));
         //3.定义变量，记录读取到的数据
         int len;

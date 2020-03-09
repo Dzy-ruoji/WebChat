@@ -18,7 +18,6 @@ public interface MyDataSourceInterface extends DataSource {
         return null;
     }
 
-
     //下面方法可以不用实现
     @Override
     default <T> T unwrap(Class<T> iface) throws SQLException {

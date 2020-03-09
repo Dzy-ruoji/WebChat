@@ -1,6 +1,5 @@
 function fun() {
         var jsonObj=new Object();
-
         jsonObj.username=document.getElementById("username").value;
         jsonObj.password=document.getElementById("password").value;
         jsonObj.checkcode=document.getElementById("checkcode").value;
@@ -40,8 +39,7 @@ function fun() {
                 if(data.flag==false){
                     document.getElementById("Error_Msg").innerHTML = data.errorMsg;
                 }else{
-
-                    location.href="update.html";
+                    location.href="MyChatInterface.html";
                 }
             }
         }
