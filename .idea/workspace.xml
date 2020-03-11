@@ -7,98 +7,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4b4b0df-2f49-4b56-8a89-debb1c1dd8c0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/waxsb/controller/FriendController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/controller/User2Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/controller/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/controller/ChatRoomServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/controller/ChatRoomServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/FriendDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/FriendDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/GroupsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/GroupsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/Impl/FriendDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/Impl/FriendDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/Impl/GroupsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/Impl/GroupsDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/Impl/MsgDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/Impl/MsgDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/Impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/Impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/MsgDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/MsgDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/Impl/FriendServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/Impl/FriendServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/Impl/GroupsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/Impl/GroupsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/Impl/MsgContextServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/Impl/MsgContextServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/CheckCode/MailUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/CheckCode/MailUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/CheckCode/MailUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/CheckCode/MailUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/CheckCode/MyCheckCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/CheckCode/MyCheckCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/JDBCUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/MyAbstractDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/MyAbstractDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/ConnectionProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/ConnectionProxy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/MyDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/MyDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/MyDataSourceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Database/MyDataSourceInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Image/MyImg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Image/MyImg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Json/MyJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Json/MyJson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Page/PageMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/Page/PageMsg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/listener/InitOnlineUsersList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/listener/InitOnlineUsersList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/listener/OnlineUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/com/waxsb/util/listener/OnlineUsers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/WEB-INF/classes/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/html/index_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/html/showMyself.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/html/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/html/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/html/updatePassword.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/index_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/index_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/showMyself.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/showMyself.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/updatePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/__3__war_exploded/js/updatePassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/controller/User2Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/controller/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/controller/ChatRoomServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/controller/ChatRoomServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/FriendDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/FriendDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/GroupsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/GroupsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/Impl/FriendDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/Impl/FriendDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/Impl/GroupsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/Impl/GroupsDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/Impl/MsgDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/Impl/MsgDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/Impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/Impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/MsgDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/MsgDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/Impl/FriendServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/Impl/FriendServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/Impl/GroupsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/Impl/GroupsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/Impl/MsgContextServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/Impl/MsgContextServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/CheckCode/MailUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/CheckCode/MailUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/CheckCode/MailUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/CheckCode/MailUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/CheckCode/MyCheckCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/CheckCode/MyCheckCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/JDBCUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/MyAbstractDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/MyAbstractDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/ConnectionProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/ConnectionProxy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/MyDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/MyDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/MyDataSourceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Database/MyDataSourceInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Image/MyImg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Image/MyImg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Json/MyJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Json/MyJson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Page/PageMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/Page/PageMsg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/listener/InitOnlineUsersList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/listener/OnlineUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/com/waxsb/util/listener/OnlineUsers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/新建文件夹 (3)/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/新建文件夹 (3)/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/controller/User2Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/controller/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/controller/ChatRoomServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/controller/ChatRoomServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/BaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/FriendDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/FriendDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/GroupsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/GroupsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/Impl/FriendDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/Impl/FriendDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/Impl/GroupsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/Impl/GroupsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/Impl/MsgDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/Impl/MsgDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/Impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/Impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/MsgDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/MsgDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/waxsb/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/service/Impl/FriendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/service/Impl/FriendServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/service/Impl/GroupsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/service/Impl/GroupsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/waxsb/service/Impl/MsgContextServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/service/Impl/MsgContextServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/waxsb/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/CheckCode/MailUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/CheckCode/MailUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/CheckCode/MyCheckCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/CheckCode/MyCheckCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/Database/ConnectionProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/Database/ConnectionProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/Database/JDBCUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/Database/JDBCUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/Database/MyAbstractDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/Database/MyAbstractDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSourceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSourceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/Image/MyImg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/Image/MyImg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/Json/MyJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/Json/MyJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/Page/PageMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/Page/PageMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/listener/InitOnlineUsersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/listener/InitOnlineUsersList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/waxsb/util/listener/OnlineUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/waxsb/util/listener/OnlineUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/index_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/showMyself.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/updatePassword.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/index_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/index_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/showMyself.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/showMyself.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/updatePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/updatePassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/新建文件夹 (3).iml" beforeDir="false" afterPath="$PROJECT_DIR$/新建文件夹 (3).iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,116 +70,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FriendController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/FriendController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="method#getUserService#0;class#FriendController#0" />
-                <element signature="method#getFriendService#0;class#FriendController#0" />
-                <element signature="method#addFriend#0;class#FriendController#0" />
-                <element signature="method#findFriendRequest#0;class#FriendController#0" />
-                <element signature="method#findRespMessageList#0;class#FriendController#0" />
-                <element signature="method#findFriendResponse#0;class#FriendController#0" />
-                <element signature="method#agreeReq#0;class#FriendController#0" />
-                <element signature="method#rejectReq#0;class#FriendController#0" />
-                <element signature="method#deleteReqRespMsg#0;class#FriendController#0" />
-                <element signature="method#deleteMyFriend#0;class#FriendController#0" />
-                <element signature="method#showNickname#0;class#FriendController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChatRoomServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/ChatRoomServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="99" column="33" lean-forward="true" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
+            <state relative-caret-position="155">
+              <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#start#0;class#ChatRoomServer#0" />
+                <element signature="method#chat#0;class#ChatRoomServer#0" />
                 <element signature="method#close#0;class#ChatRoomServer#0" />
                 <element signature="method#error#0;class#ChatRoomServer#0" />
                 <element signature="method#broadcast#0;class#ChatRoomServer#0" />
                 <element signature="method#privateChat#0;class#ChatRoomServer#0" />
                 <element signature="method#saveMsg#0;class#ChatRoomServer#0" />
                 <element signature="method#getNotReadCount#0;class#ChatRoomServer#0" />
-                <element signature="e#9214#9215#0" expanded="true" />
-                <element signature="e#9295#9296#0" expanded="true" />
                 <element signature="method#addFriend#0;class#ChatRoomServer#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyChatInterface.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/MyChatInterface.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="51" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#span#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#6;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#h2#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#h2#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#script#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketMsg.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/SocketMsg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyChatInterface.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/MyChatInterface.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#88#109#0" />
-                <element signature="e#526#538#0" />
-                <element signature="n#!!block;n#getMessage#0" />
-                <element signature="e#3741#3796#0" />
-                <element signature="e#3864#3891#0" />
-                <element signature="n#!!block;n#getMyself#0" />
-                <element signature="n#!!block;n#getMyFriends#0" />
-                <element signature="n#!!block;n#getMyGroups#0" />
-                <element signature="n#!!block;n#searchMyFriend#0" />
-                <element signature="n#!!block;n#getData#0" />
-                <element signature="n#!!block;n#getMsgData#0" />
-                <element signature="n#!!block;n#addFriend#0" />
-                <element signature="n#!!block;n#private#0" />
-                <element signature="n#!!block;n#public#0" />
-                <element signature="n#!!block;n#updateNickname#0" />
-                <element signature="n#!!block;n#readNew#0" />
               </folding>
             </state>
           </provider>
@@ -232,14 +98,13 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>broadcast</find>
       <find>system</find>
       <find>ObjectMapper.put</find>
       <find>messageMap.put</find>
@@ -269,6 +134,7 @@
       <find>public(this</find>
       <find>messageMap</find>
       <find>private</find>
+      <find>conn.</find>
     </findStrings>
     <replaceStrings>
       <replace>msg</replace>
@@ -280,13 +146,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/html/test.html" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/dao/FriendDao.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/service/FriendService.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/controller/ChatController.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/dao/Impl/FriendDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/service/Impl/FriendServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/model/AddGroups.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/service/GroupsService.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/dao/GroupsDao.java" />
@@ -304,10 +165,6 @@
         <option value="$PROJECT_DIR$/web/js/login.js" />
         <option value="$PROJECT_DIR$/src/com/waxsb/util/test/test.java" />
         <option value="$PROJECT_DIR$/web/js/index_1.js" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/dao/Impl/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/util/Database/ConnectionProxy.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/util/Database/MyAbstractDataSource.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/service/Impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/util/Database/JDBCUtils.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/model/User_GroupsToUser.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/controller/GroupChatController.java" />
@@ -320,16 +177,25 @@
         <option value="$PROJECT_DIR$/src/com/waxsb/model/Friend.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/controller/FriendController.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/util/Page/PageMsg.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/dao/Impl/MsgDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/service/Impl/MsgContextServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/dao/Impl/GroupsDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/service/Impl/GroupsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSource.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/analysis.txt" />
         <option value="$PROJECT_DIR$/src/com/waxsb/controller/1.txt" />
         <option value="$PROJECT_DIR$/web/html/MyChatInterface.html" />
         <option value="$PROJECT_DIR$/src/com/waxsb/model/SocketMsg.java" />
         <option value="$PROJECT_DIR$/web/js/MyChatInterface.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/util/test/DynamicProxySubject.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/util/Database/MyAbstractDataSource.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/util/Database/ConnectionProxy.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSource.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/dao/BaseDao.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/dao/Impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/dao/Impl/MsgDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/dao/Impl/GroupsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/dao/Impl/FriendDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/service/Impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/service/Impl/FriendServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/service/Impl/GroupsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/waxsb/service/Impl/MsgContextServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/waxsb/controller/ChatRoomServer.java" />
       </list>
     </option>
@@ -356,10 +222,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-5" />
     <option name="width" value="1935" />
-    <option name="height" value="1039" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -369,6 +235,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -380,32 +248,25 @@
             <path>
               <item name="WebChat" type="b2602c69:ProjectViewProjectNode" />
               <item name="新建文件夹 (3)" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebChat" type="b2602c69:ProjectViewProjectNode" />
               <item name="新建文件夹 (3)" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="waxsb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebChat" type="b2602c69:ProjectViewProjectNode" />
               <item name="新建文件夹 (3)" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="新建文件夹 (3)" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="waxsb" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -720,6 +581,10 @@
       <workItem from="1582770647501" duration="83896000" />
       <workItem from="1583028378385" duration="177506000" />
       <workItem from="1583577871285" duration="91948000" />
+      <workItem from="1583770427503" duration="1251000" />
+      <workItem from="1583915737110" duration="87000" />
+      <workItem from="1583916894049" duration="17534000" />
+      <workItem from="1583939946302" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="feat：更新了数据库连接池、登录注册功能">
       <created>1582030004629</created>
@@ -764,7 +629,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="627127000" />
+    <option name="totallyTimeSpent" value="646010000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -776,33 +641,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-4" y="0" width="1548" height="832" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5013405" side_tool="true" weight="0.29957205" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3297587" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info id="Structure" order="1" sideWeight="0.4136947" side_tool="true" weight="0.24128686" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49934897" weight="0.24393724" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32905984" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3109843" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32952926" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5013405" side_tool="true" weight="0.29957205" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3297587" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49932885" weight="0.27817404" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.3537803" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.35107914" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49934897" weight="0.32853025" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5804481" visible="true" weight="0.25670242" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5804481" visible="true" weight="0.27046978" />
       <window_info id="Web" order="6" sideWeight="0.41955194" side_tool="true" weight="0.25067025" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info id="Structure" order="1" sideWeight="0.4136947" side_tool="true" weight="0.24128686" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49934897" weight="0.31223023" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.31079137" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -851,7 +716,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="187" />
+      <option name="time" value="205" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -859,184 +724,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/BaseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding>
-            <element signature="method#doGet#0;class#BaseServlet#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/MyAbstractDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2117">
-          <caret line="154" column="97" selection-start-line="154" selection-start-column="97" selection-end-line="154" selection-end-column="97" />
-          <folding>
-            <element signature="method#MyAbstractDataSource#0;class#MyAbstractDataSource#0" />
-            <element signature="method#MyAbstractDataSource#1;class#MyAbstractDataSource#0" />
-            <element signature="method#MyAbstractDataSource#2;class#MyAbstractDataSource#0" />
-            <element signature="method#MyAbstractDataSource#3;class#MyAbstractDataSource#0" />
-            <element signature="e#3393#3394#0" expanded="true" />
-            <element signature="e#3432#3433#0" expanded="true" />
-            <element signature="method#doGetConnection#0;class#MyAbstractDataSource#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSourceInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/service/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="97" column="43" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
-          <folding>
-            <element signature="method#findUserByPage#0;class#UserServiceImpl#0" />
-            <element signature="method#updateMessage#0;class#UserServiceImpl#0" />
-            <element signature="method#findUserBySearchName#0;class#UserServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/Impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-          <folding>
-            <element signature="method#insert#0;class#UserDaoImpl#0" />
-            <element signature="method#deleteById#0;class#UserDaoImpl#0" />
-            <element signature="method#getAll#0;class#UserDaoImpl#0" />
-            <element signature="method#getCount#0;class#UserDaoImpl#0" />
-            <element signature="method#updateMessageByUsername#0;class#UserDaoImpl#0" />
-            <element signature="method#updateImg#0;class#UserDaoImpl#0" />
-            <element signature="method#findBySearchName#0;class#UserDaoImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/test/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/User_GroupsMSGContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/index_1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="146" column="26" selection-start-line="146" selection-start-column="26" selection-end-line="146" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!block;n#addFriend#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/User_GroupsToUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Json/MyJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="996">
-          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Page/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/Friend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/66.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4176" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/update.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1218" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2060" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/service/Impl/FriendServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#findFriendRequest#0;class#FriendServiceImpl#0" />
-            <element signature="method#responseMessage#0;class#FriendServiceImpl#0" />
-            <element signature="method#friendReqResp#0;class#FriendServiceImpl#0" />
-            <element signature="method#allowFriendReq#0;class#FriendServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/666.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="33" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/User_Groups.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1044,20 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/Impl/MsgDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/service/Impl/MsgContextServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
@@ -1072,9 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="164" selection-start-line="164" selection-end-line="164" />
-          <folding>
-            <element signature="e#6438#6439#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,20 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="472" selection-start-line="472" selection-end-line="472" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/StringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="207" selection-start-line="207" selection-end-line="207" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/AbstractStringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="644" selection-start-line="644" selection-end-line="644" />
         </state>
       </provider>
     </entry>
@@ -1110,27 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2262">
           <caret line="118" column="33" lean-forward="true" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
-          <folding>
-            <element signature="method#GetUserList#0;class#PageMsg#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-          <folding>
-            <element signature="method#update#0;class#BaseDao#0" />
-            <element signature="method#getInstance#0;class#BaseDao#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/Impl/GroupsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="166" column="9" lean-forward="true" selection-start-line="166" selection-start-column="9" selection-end-line="166" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1141,20 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/service/Impl/GroupsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="164" column="5" lean-forward="true" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/reflect/InvocationTargetException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="e#2807#2808#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1172,33 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/JDBCUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="method#getConnection#0;class#JDBCUtils#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-          <folding>
-            <element signature="method#getConnection#0;class#MyDataSource#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/ConnectionProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/waxsb/analysis.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -1210,11 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="method#getResultInfo#0;class#MsgController#0" />
-            <element signature="method#getMsgContextService#0;class#MsgController#0" />
-            <element signature="method#privateMsg#0;class#MsgController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,37 +819,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-353">
           <caret line="107" selection-start-line="107" selection-end-line="107" />
-          <folding>
-            <element signature="method#getResultInfo#0;class#GroupChatController#0" />
-            <element signature="method#getGroupsService#0;class#GroupChatController#0" />
-            <element signature="method#updateGroupName#0;class#GroupChatController#0" />
-            <element signature="method#updateGroupAdmin#0;class#GroupChatController#0" />
-            <element signature="method#getAllNickname#0;class#GroupChatController#0" />
-            <element signature="method#findGroup#0;class#GroupChatController#0" />
-            <element signature="method#updateAnnouncement#0;class#GroupChatController#0" />
-            <element signature="method#addGroup#0;class#GroupChatController#0" />
-            <element signature="method#findGroupRequest#0;class#GroupChatController#0" />
-            <element signature="method#findGroupResponse#0;class#GroupChatController#0" />
-            <element signature="method#isAllowReq#0;class#GroupChatController#0" />
-            <element signature="method#deleteReqRespMsg#0;class#GroupChatController#0" />
-            <element signature="method#exitMyGroup#0;class#GroupChatController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/showMyself_1.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/1.txt">
+    <entry file="file://$PROJECT_DIR$/web/html/MyChatInterface.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="34" />
+        <state relative-caret-position="609">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/SocketMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/FriendController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
+        <state relative-caret-position="899">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="method#getUserService#0;class#FriendController#0" />
@@ -1270,77 +859,235 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/MyChatInterface.html">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="51" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#span#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h2#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#h2#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="406">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/MyChatInterface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="145">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/test/Subject.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/test/DynamicProxySubject.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/1.txt" />
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="277" selection-start-line="277" selection-end-line="277" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/AbstractStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/sql/DriverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="237" selection-start-line="237" selection-end-line="237" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="2993" selection-start-line="2993" selection-end-line="2993" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#88#109#0" />
-            <element signature="e#526#538#0" />
-            <element signature="n#!!block;n#getMessage#0" />
-            <element signature="e#3741#3796#0" />
-            <element signature="e#3864#3891#0" />
-            <element signature="n#!!block;n#getMyself#0" />
-            <element signature="n#!!block;n#getMyFriends#0" />
-            <element signature="n#!!block;n#getMyGroups#0" />
-            <element signature="n#!!block;n#searchMyFriend#0" />
-            <element signature="n#!!block;n#getData#0" />
-            <element signature="n#!!block;n#getMsgData#0" />
-            <element signature="n#!!block;n#addFriend#0" />
-            <element signature="n#!!block;n#private#0" />
-            <element signature="n#!!block;n#public#0" />
-            <element signature="n#!!block;n#updateNickname#0" />
-            <element signature="n#!!block;n#readNew#0" />
+            <element signature="e#117955#117956#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/SocketMsg.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/ThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="262" selection-start-line="262" selection-end-line="262" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSourceInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="459" selection-start-line="459" selection-end-line="459" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_73/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/ConnectionProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-638">
+          <caret line="8" column="59" lean-forward="true" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/MyDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/MyAbstractDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/util/Database/JDBCUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/BaseServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="method#update#0;class#BaseDao#0" />
+            <element signature="method#getInstance#0;class#BaseDao#0" />
+            <element signature="method#getForList#0;class#BaseDao#0" />
+            <element signature="method#getValue#0;class#BaseDao#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/Impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/Impl/FriendDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/service/Impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="259" column="18" lean-forward="true" selection-start-line="259" selection-start-column="18" selection-end-line="259" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/service/Impl/FriendServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="228" selection-start-line="228" selection-end-line="228" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/Impl/GroupsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/service/Impl/GroupsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="456" column="21" selection-start-line="456" selection-start-column="16" selection-end-line="456" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/dao/Impl/MsgDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1199">
+          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/waxsb/service/Impl/MsgContextServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="145" column="9" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/waxsb/controller/ChatRoomServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="99" column="33" lean-forward="true" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
+        <state relative-caret-position="155">
+          <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#start#0;class#ChatRoomServer#0" />
+            <element signature="method#chat#0;class#ChatRoomServer#0" />
             <element signature="method#close#0;class#ChatRoomServer#0" />
             <element signature="method#error#0;class#ChatRoomServer#0" />
             <element signature="method#broadcast#0;class#ChatRoomServer#0" />
             <element signature="method#privateChat#0;class#ChatRoomServer#0" />
             <element signature="method#saveMsg#0;class#ChatRoomServer#0" />
             <element signature="method#getNotReadCount#0;class#ChatRoomServer#0" />
-            <element signature="e#9214#9215#0" expanded="true" />
-            <element signature="e#9295#9296#0" expanded="true" />
             <element signature="method#addFriend#0;class#ChatRoomServer#0" />
           </folding>
         </state>

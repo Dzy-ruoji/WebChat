@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ConcurrentMap;
 
 //数据源的连接池
 public class MyDataSource extends MyAbstractDataSource {
@@ -37,7 +38,8 @@ public class MyDataSource extends MyAbstractDataSource {
     @Override
     public Connection getConnection() throws SQLException {
         ConnectionProxy connectionProxy=getConnectionProxy(super.getUser(),super.getPassword());
-           return connectionProxy.getProxyConnection();
+        Connection proxyConnection = connectionProxy.getProxyConnection();
+        return  proxyConnection;
     }
 
     //获取连接
@@ -54,7 +56,7 @@ public class MyDataSource extends MyAbstractDataSource {
                     connectionProxy = idleConnections.remove(0);
                 }else {
                     //没有空闲连接可以使用，那么我们需要获取连接新的连接（创建新连接）
-                    if(activeConnections.size()<super.getPoolMaxActiveConnections()){
+                    if(activeConnections.size()<getPoolMaxActiveConnections()){
                         //如果当前激活的连接数小于我们允许的最大连接数，那么此时可以创建一个新的连接
                         connectionProxy=new ConnectionProxy(super.getConnection(),this);
                     }
@@ -93,6 +95,5 @@ public class MyDataSource extends MyAbstractDataSource {
             //通知一下，唤醒上面那个等待获取连接的线程
             monitor.notify();
         }
-
     }
 }

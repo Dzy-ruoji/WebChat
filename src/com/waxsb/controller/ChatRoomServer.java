@@ -53,7 +53,6 @@ public class ChatRoomServer {
         //key为sessionId、value为ChatRoomServer对象
         connectMap.put(session.getId(),this);
         UserSession.put(username,session);
-
     }
 
     @OnMessage
@@ -141,8 +140,11 @@ public class ChatRoomServer {
                         e.printStackTrace();
                     }
                     //将json数据写回客户端
-                    session.getAsyncRemote().sendText("notReadTotal&"+getNotReadTotal(name.getUsername()));
-
+                    try {
+                        session.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser()));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     session.getAsyncRemote().sendText(json);
                 }
             }
@@ -165,17 +167,26 @@ public class ChatRoomServer {
         }else if(type==2){
             //发送给对方
             if(toSession!=null){
+                try {
+                    toSession.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 toSession.getAsyncRemote().sendText(json);
-                toSession.getAsyncRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser()));
-            }
+                 }
 
         } else {
             //发送给双方
             fromSession.getAsyncRemote().sendText(json);
             if(toSession!=null){
+                try {
+                    toSession.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 toSession.getAsyncRemote().sendText(json);
-                toSession.getAsyncRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser()));
-            }
+                //同步发送出错
+                  }
         }
     }
 
@@ -224,26 +235,6 @@ public class ChatRoomServer {
         messageMap.get(key1).remove(key2);
     }
 
-    public void ReadNew(){
-        System.out.println("ReadNew:username="+username);
-        //登录成功后接收未读信息(socketMsg对象)
-     /*   List<SocketMsg> messageList = messageMap.get(username);
-        if(messageList!=null){
-            ObjectMapper mapper = ObjectMapper.get(session.getId());
-            for(SocketMsg socketMsg : messageList){
-                String json = null;
-                try {
-                    json = mapper.writeValueAsString(socketMsg);
-                } catch (JsonProcessingException e) {
-                    e.printStackTrace();
-                }
-                //将json数据写回客户端,一条一条写回
-                session.getAsyncRemote().sendText(json);
-            }
-            //查看完了移除Map，以防下一登录时读取
-            messageMap.remove(username);
-        }*/
-    }
 
     public void addFriend(SocketMsg socketMsg){
         boolean flag=true;

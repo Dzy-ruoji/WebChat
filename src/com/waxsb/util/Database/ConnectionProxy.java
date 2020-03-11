@@ -23,7 +23,7 @@ public class ConnectionProxy implements InvocationHandler {
     }
 
     public Connection getProxyConnection() {
-        return this.proxyConnection;
+        return proxyConnection;
     }
 
     public void setProxyConnection(Connection proxyConnection) {
@@ -47,6 +47,7 @@ public class ConnectionProxy implements InvocationHandler {
         this.proxyConnection= (Connection) Proxy.newProxyInstance(Connection.class.getClassLoader(),
                                                      new Class<?>[] {Connection.class},
                                                      this);
+
     }
 
     //当调用Connection对象里面的方法时，首先会被invoke拦截
@@ -56,9 +57,11 @@ public class ConnectionProxy implements InvocationHandler {
         String methodName=method.getName();
 
         if(methodName.equalsIgnoreCase("close")){
-            // 把连接归还到连接池
+            // 把代理连接归还到连接池(归还成功)
             myDataSource.closeConnection(this);
+
             return null;
+
         }else{
             //可能有问题，执行的是真实链接
             return  method.invoke(realConnection,args);
