@@ -9,8 +9,6 @@ import com.waxsb.service.Impl.FriendServiceImpl;
 import com.waxsb.service.Impl.GroupsServiceImpl;
 import com.waxsb.model.SocketMsg;
 import com.waxsb.service.Impl.MsgContextServiceImpl;
-import net.sf.json.JSONObject;
-
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
@@ -25,7 +23,7 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 //前端需要判断消息的类型为纯文本、文件、图片
 @ServerEndpoint("/chat/chatRoomServer/{myname}")
-public class ChatRoomServer {
+public class ChatRoomServer{
     private Session session;
     private String username;
     //记录此次聊天室有多少个连接 key是SessionId value是ChatRoomServer对象
@@ -34,7 +32,6 @@ public class ChatRoomServer {
     private static  ConcurrentMap<String,Session> UserSession = new ConcurrentHashMap<String,Session>();
     //储存离线信息
     private static Map<String, Map<String,List<SocketMsg>>> messageMap=new HashMap<>();
-
     //储存信息的集合
     private static CopyOnWriteArrayList list = new CopyOnWriteArrayList();
     private static ConcurrentMap<String,GroupsServiceImpl> GroupsServiceImplMap = new ConcurrentHashMap<>();
@@ -141,7 +138,7 @@ public class ChatRoomServer {
                     }
                     //将json数据写回客户端
                     try {
-                        session.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser()));
+                        session.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser())+"&"+"user_GroupID&"+socketMsg.getUser_GroupID());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -168,7 +165,7 @@ public class ChatRoomServer {
             //发送给对方
             if(toSession!=null){
                 try {
-                    toSession.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser()));
+                      toSession.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser())+"&fromUser&"+socketMsg.getFromUser());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -180,7 +177,8 @@ public class ChatRoomServer {
             fromSession.getAsyncRemote().sendText(json);
             if(toSession!=null){
                 try {
-                    toSession.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser()));
+                    System.out.println("notReadTotal&"+getNotReadTotal(socketMsg.getToUser())+"&fromUser&"+socketMsg.getFromUser());
+                    toSession.getBasicRemote().sendText("notReadTotal&"+getNotReadTotal(socketMsg.getToUser())+"&fromUser&"+socketMsg.getFromUser());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -231,11 +229,10 @@ public class ChatRoomServer {
         return total;
     }
     /** 从未读Map中删除已读消息 */
-    public void delete(String key1,String key2){//key(接收者) value: key(发送者) value
+    /*public void delete(String key1,String key2){//key(接收者) value: key(发送者) value
         messageMap.get(key1).remove(key2);
     }
-
-
+    */
     public void addFriend(SocketMsg socketMsg){
         boolean flag=true;
         FriendServiceImpl friendService = FriendServiceImplMap.get(session.getId());

@@ -43,4 +43,15 @@ public class MyJson {
         resp.setCharacterEncoding("utf-8");
         resp.getWriter().write(json);
     }
+
+    public static String wbJson(WsInfo wsInfo){
+        ObjectMapper mapper = new ObjectMapper();
+        String json = null;
+        try {
+            json = mapper.writeValueAsString(wsInfo);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return json;
+    }
 }

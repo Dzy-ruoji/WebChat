@@ -10,35 +10,47 @@ window.onload=function () {
 
 function chat() {
     if ('WebSocket' in window) {
-        var wsUrl="ws://localhost:8080/chat/chatRoomServer/"+myname;
+        var wsUrl="ws://localhost:8080/chat/chatRoomSerController/"+myname;
         //客户端与服务端建立连接，建立连接后，会发生一个ws.open事件
         ws = new WebSocket(wsUrl);
         //连接成功后，啥都不干
         ws.onopen=function () {
+
         }
 
         //客户端收到服务器发送的消息,在线时的即时信息，不在线时的多条离线信息,难点
         ws.onmessage = function (message) {
+            //先判断当前跟谁在聊天
+            var connectNow = document.getElementById("connectNameDiv").getAttribute("value");
             var arr = message.data.split("&");
             if(arr[0] == 'notReadTotal'){
-                document.getElementById("manySpan").innerText=arr[1];
+                //如果当前有在聊天则减去当前的已读记录
+                var notReadTotal = arr[1];
+                var sender;
+                if(arr[2]=='user_GroupID'){
+                     sender = arr[3];
+                }else if(arr[2]=='fromUser'){
+                     sender = arr[3];
+                }
+                if(connectNow==sender){
+
+                    notReadTotal = notReadTotal-1;
+                }
+                document.getElementById("manySpan").innerText=notReadTotal;
                 return;
             }
 
             var msgList=JSON.parse(message.data)
-             //先判断当前跟谁在聊天
                //如果消息的发送者刚好是现在这个人,就显示到聊天页面
             var flag = false;
-            if(msgList.type==1){
-                var connectNow = document.getElementById("connectNameDiv").getAttribute("value");
-                if(connectNow==msgList.toUser||connectNow==msgList.fromUser){
+             if(msgList.type==1){
+                 if(connectNow==msgList.toUser||connectNow==msgList.fromUser){
                     flag = true;
                 }else {
                     flag = false;
                 }
             }else{
-                var connectNow = document.getElementById("connectNameDiv").getAttribute("value");
-               if(connectNow==msgList.user_GroupID){
+                if(connectNow==msgList.user_GroupID){
                    flag = true;
                }else{
                    flag = false;
@@ -65,6 +77,8 @@ function chat() {
                         span.setAttribute("class","itsName");
                         span.innerText = Msg.fromUser;
                 }
+                        haveRead(msgList.type,connectNow);
+                    //显示未读消息数
                     //滚动条
                     var msg = document.getElementById("ourMessageDiv");
                     //差值 溢出的高度减掉可视高度
@@ -99,7 +113,12 @@ function getMessage() {
 
     }
     //根据id获取要发送的对象
-    var socketMsg = {msg:inputMessage,toUser:toUser,fromUser:fromUser,type:type,msgType:msgType,user_GroupID:user_GroupID};
+   // var Msg = {msg:inputMessage,toUser:toUser,fromUser:fromUser,type:type,msgType:msgType,user_GroupID:user_GroupID};
+    var socketMsg = {};
+    socketMsg.user_GroupID=1;
+    //测试
+    var Msg = {methodName:"privateChat",socketMsg:socketMsg}
+
 
     //获取消息后，将消息发送给服务端,暂时会造成消息泄露
     if(typeof (inputMessage) == 'undfined'||inputMessage ==""){
@@ -107,7 +126,7 @@ function getMessage() {
     }else {
         document.getElementById("inputMessage").value=" ";
         //这个是关键
-        ws.send(JSON.stringify(socketMsg));
+        ws.send(JSON.stringify(Msg));
         //清空文本框
 
     }
@@ -123,8 +142,8 @@ document.onkeyup = function (e) {
 //关闭页面或者用户退出时，会执行一个ws.close方法
 window.onbeforeunload = function () {
         ws.close();
-    }
-    //切换页面时也需要执行ws.close
+}
+
 
 //获取我自身信息
 function getMyself() {
@@ -188,7 +207,6 @@ function getMyFriends() {
             var data = JSON.parse(xhttp.responseText);
             //拿到了好友类集合
             var myFriendList = data.data;
-
             if(myFriendList.length>0){
                 for(var i=0;i<myFriendList.length;i++){
                     //展示好友信息
@@ -593,6 +611,12 @@ function readNew(msgList) {
     //先加点提示给消息通知列表一栏提示未读，累加法，从数据库里面查算了
 
     //用户点击消息通知时会显示未读的消息
+
+
+}
+
+//处理已读消息
+function haveRead(type,connectNow) {
 
 
 }
