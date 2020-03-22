@@ -38,4 +38,5 @@ public class MsgController extends BaseServlet {
         MyJson.returnJson(resultInfo,resp);
         System.out.println("查询流程结束");
     }
+
 }

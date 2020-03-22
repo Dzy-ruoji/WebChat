@@ -79,4 +79,19 @@ public class MsgDaoImpl implements MsgDao {
     public void deleteMsg(Connection conn) {
         String sql = "SELECT*FROM socketmsg WHERE DATE_FORMAT(createTime, '%Y %m') = DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 MONTH),'%Y %m')";
     }
+
+    @Override
+    public List<SocketMsg> findContacts(Connection conn, String username) throws SQLException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+        String sql = "SELECT Mid,toUser,type FROM(\t\n" +
+                "\tSELECT Mid,toUser,createTime,type FROM (\n" +
+                "\t\tSELECT Mid,touser AS toUser,createTime,type FROM socketmsg WHERE fromuser = ? AND type = 1\n" +
+                "\t\tUNION  \n" +
+                "\t\tSELECT Mid,fromuser AS toUser,createTime,type FROM socketmsg WHERE touser = ? AND type = 1\n" +
+                "\t\tUNION \n" +
+                "\t\tSELECT Mid,user_groupid AS toUser,createTime,type FROM socketmsg WHERE fromuser = ? AND type = 2\n" +
+                "\t) t1  ORDER BY t1.createTime DESC ) t2\n" +
+                "GROUP BY t2.toUser ORDER BY t2.createTime DESC";
+        List<SocketMsg> list = baseDao.getForList(conn, SocketMsg.class, sql, username,username,username);
+        return list;
+    }
 }

@@ -3,6 +3,7 @@ import com.waxsb.model.SocketMsg;
 import com.waxsb.util.Page.PageBean;
 
 import java.sql.Date;
+import java.util.List;
 
 public interface MsgContextService {
 
@@ -13,4 +14,6 @@ public interface MsgContextService {
     PageBean<SocketMsg> findPrivateMsg(int currentPage, int row, String fromUser, String toUser, Date date);
 
     void deleteMsg();
+
+    List<SocketMsg> findContacts(String fromUser);
 }

@@ -4,6 +4,7 @@ import com.waxsb.model.AddGroups;
 import com.waxsb.model.User;
 import com.waxsb.model.User_Groups;
 import com.waxsb.model.User_GroupsToUser;
+import com.waxsb.util.Page.PageBean;
 
 import java.util.List;
 
@@ -42,4 +43,6 @@ public interface GroupsService {
     List<User> getManager(int ug_groupID);
 
     List<User> memberName(int ug_groupId);
+
+    PageBean<User_Groups> getGroupByNameOrNum(String currentPage, String row, String groupname);
 }

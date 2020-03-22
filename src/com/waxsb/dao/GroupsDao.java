@@ -44,4 +44,8 @@ public interface GroupsDao {
     List<User> getGroupManagers(Connection conn, int ug_groupID) throws SQLException, InstantiationException, IllegalAccessException, NoSuchFieldException;
 
     List<User> getMemberName(Connection conn, int ug_groupId) throws SQLException, InstantiationException, IllegalAccessException, NoSuchFieldException;
+
+    int getGroupByNameOrNumCount(Connection conn, String groupname) throws SQLException;
+
+    List<User_Groups> getGroupByNameOrNum(Connection conn, int start, int rows, String groupname) throws SQLException, InstantiationException, IllegalAccessException, NoSuchFieldException;
 }

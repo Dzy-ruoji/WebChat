@@ -2,7 +2,8 @@ package com.waxsb.util.Page;
 
 import com.waxsb.model.SocketMsg;
 import com.waxsb.model.User;
-import com.waxsb.model.User_GroupsMSGContent;
+import com.waxsb.model.User_Groups;
+import com.waxsb.service.Impl.GroupsServiceImpl;
 import com.waxsb.service.Impl.MsgContextServiceImpl;
 import com.waxsb.service.Impl.UserServiceImpl;
 import com.waxsb.service.MsgContextService;
@@ -72,7 +73,6 @@ public class PageMsg {
             row="5";
         }
 
-
         //2.调用service查询
         UserService service=new UserServiceImpl();
         PageBean<User>pb= service.findUserBySearchName(currentPage,row,username);
@@ -126,6 +126,39 @@ public class PageMsg {
         }else {
             System.out.println("出问题了，啥也不是");
         }
+
+        return pb;
+    }
+
+    public static PageBean<User_Groups> GetGroupByNameOrNum(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {
+        //1.获取参数
+        String currentPage=null;
+        String row=null;
+        String groupname=null;
+        req.setCharacterEncoding("utf-8");
+        JSONObject jsonObject = MyJson.getJson(req);
+
+        if(jsonObject!=null){
+            currentPage =jsonObject.get("currentPage").toString();//传递当前页码
+            row = jsonObject.get("row").toString();//每页显示条数
+
+            try {
+                groupname=jsonObject.get("groupname").toString();//查询的用户名
+            } catch (Exception e) {
+                System.out.println("查询不带用户名");
+            }
+        }
+
+        if(currentPage==null||"".equals(currentPage)){
+            currentPage="1";
+        }
+        if(row==null||"".equals(row)){
+            row="5";
+        }
+
+        //2.调用service查询
+        GroupsServiceImpl service = new GroupsServiceImpl();
+        PageBean<User_Groups>pb= service.getGroupByNameOrNum(currentPage,row,groupname);
 
         return pb;
     }

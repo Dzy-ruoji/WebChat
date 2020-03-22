@@ -85,6 +85,7 @@
     line-height: 50px;
     padding-left: 20px;
     flex-shrink: 0;
+    position:relative;
 }
 .middle .ContactList>ul>li>button{
     border: 2px solid black;
@@ -97,6 +98,21 @@
     cursor: pointer;
 }
 
+.middle .ContactList>ul>li>span{
+        display: inline-block;
+        background-color: red;
+        color: #fff;
+        height: 18px;
+        width: 18px;
+        line-height: 18px;
+        font-size: 12px;
+        border-radius:  50%;
+        position: absolute;
+        text-align: center;
+        font-size: 13px;
+        left: 0;
+        top:   30%;
+}
 .chat{
     flex: 12;
     display: flex;

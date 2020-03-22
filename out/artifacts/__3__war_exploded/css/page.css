@@ -1,0 +1,156 @@
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.write .headline{
+    text-align: center;
+}
+.write .inleft{
+    float: left;
+}
+.write .inleft>input{  
+    width: 160px;
+    height: 25px;
+    border: 1px solid rgb(148, 146, 146);
+    border-radius: 5%;
+}
+.write .inleft>input:focus{
+    border: 1px solid #38f;
+    border-radius: 5%;
+}
+.write .inleft>button{
+    height: 28px;
+    width: 50px;
+    background-color: #fff;
+    border: 1px solid rgb(148, 146, 146);
+    border-radius: 8%;
+    line-height: 0;
+}
+.write .buright{
+    float: right;
+}
+.write .buright .button{
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    background-color: rgb(24, 131, 194);
+    border:1px solid royalblue;
+    border-radius: 8%;
+}
+/* 阅读区 */
+.read .top{
+    background-color: #ddf5d4;    
+    height: 40px;
+    margin-top:5px;
+    line-height: 40px;
+    
+}
+.read .top ul{
+    display: flex;
+    justify-content: space-around;
+}
+.read .top li{
+    text-align: center;
+    flex:0 2 auto;
+    color: black;
+    font-weight: bold;
+    width:12.6%;
+    border-right:1px solid #b1b1b4;
+}
+.read .top li:last-child{
+  width: 8%;
+  border: none;
+}
+.read .top li:nth-child(1){
+    flex-shrink: 1;
+    width: 5%;
+}
+.read .b-checkbox{
+    display: inline-block;
+    border: 1px solid rgb(148, 146, 146);
+    width: 10px;
+    height: 10px;
+    border-radius: 15%;
+    background-color: #fff;
+    padding-top: 2px;
+    padding-left: 2px;
+    cursor: pointer;
+}
+.read .a-checkbox{
+   display: none;
+}
+.read .b-checkbox::after{
+    content:"";
+    width: 8px;
+    height: 8px;
+    border-radius: 15%;
+    background-color: rgb(143, 188, 238);
+    display: none; 
+}
+.read .a-checkbox:checked~.b-checkbox::after{
+    display: block;
+}
+/* 用户信息 */
+.read .bottom ul{
+    /* background-color: blue; */
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #b1b1b4;
+    display: flex;
+    justify-content: space-around;
+}
+
+.read .bottom .message>li{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    width:12.6%;
+    border-right:1px solid #b1b1b4;    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex:0 2 auto;
+}
+.read .bottom .message li:nth-child(1){
+
+    width: 4.95%;
+    flex-shrink: 1;
+}
+.read .bottom .message li:last-child{
+    width: 8%;
+    border: none;
+}
+.read .bottom .message .operate{
+    font-weight: normal;
+    border: 1px solid #e1e2e3;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 0 3px;
+    cursor: pointer;
+}
+.read .bottom .message .operate:hover{
+    background-color: #38f;
+    color: #fff;
+}
+/* 分页导航栏 */
+.nav{
+    /* background-color: red; */
+    margin-top: 40px;
+    height: 60px;
+    line-height: 60px;
+}
+.nav .page{
+    display:inline-block;
+    color: #38f;
+    text-align: center;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border:1px solid #e1e2e3;
+}
+.nav .chosePage{
+    color: #fff;
+    background-color: #38f;
+}

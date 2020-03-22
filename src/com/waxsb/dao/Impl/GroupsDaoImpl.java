@@ -8,6 +8,7 @@ import com.waxsb.model.User_Groups;
 import com.waxsb.model.User_GroupsToUser;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class GroupsDaoImpl implements GroupsDao {
@@ -166,6 +167,46 @@ public class GroupsDaoImpl implements GroupsDao {
             return null;
         }
         return userList;
+    }
+
+    @Override
+    public int getGroupByNameOrNumCount(Connection conn, String groupname) throws SQLException {
+        //1.定义sql模板
+        String sql="select count(*) from user_groups where 1=1 ";
+        StringBuilder sb = new StringBuilder(sql);
+        List params = new ArrayList();//条件
+        //判断参数是否有值
+        if(groupname!=null && groupname.length()>0){
+           //修改一下
+            sb.append(" and UG_Number like ? UNION \n" +
+                    "SELECT count(*) FROM `user_groups` WHERE `UG_Name` LIKE ?");
+            params.add("%"+groupname+"%");
+            params.add("%"+groupname+"%");
+        }
+        sql = sb.toString();
+        return Integer.parseInt(baseDao.getValue(conn,sql,params.toArray()).toString());
+    }
+
+    @Override
+    public List<User_Groups> getGroupByNameOrNum(Connection conn, int start, int rows, String groupname) throws SQLException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+        //1.定义sql模板
+        String sql="select * from user_groups where 1 = 1 ";
+        StringBuilder sb = new StringBuilder(sql);
+        List params = new ArrayList();//条件
+        //判断参数是否有值
+        if(groupname!=null && groupname.length()>0){
+            sb.append(" and UG_Number like ? UNION \n" +
+                    "SELECT * FROM `user_groups` WHERE `UG_Name` LIKE ?");
+            params.add("%"+groupname+"%");
+            params.add("%"+groupname+"%");
+        }
+
+        sb.append(" limit ?,?");//分页条件
+        sql = sb.toString();
+        params.add(start);
+        params.add(rows);
+
+        return  baseDao.getForList(conn, User_Groups.class,sql,params.toArray());
     }
 
 }

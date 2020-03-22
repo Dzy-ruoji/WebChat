@@ -8,6 +8,8 @@ import com.waxsb.service.GroupsService;
 import com.waxsb.service.Impl.GroupsServiceImpl;
 import com.waxsb.util.Json.MyJson;
 import com.waxsb.util.Json.ResultInfo;
+import com.waxsb.util.Page.PageBean;
+import com.waxsb.util.Page.PageMsg;
 import net.sf.json.JSONObject;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -258,6 +260,14 @@ public class GroupChatController extends BaseServlet {
         //发送信息给管理员或群主,根据群id
         List<User> userlist = groupsService.getManager(ug_groupID);
         //还没写完，
+    }
+
+    public void findGroupByNameOrNum(HttpServletRequest req,HttpServletResponse resp) throws IOException {
+        PageBean<User_Groups> groupList = PageMsg.GetGroupByNameOrNum(req,resp);
+        ResultInfo resultInfo=getResultInfo();
+        resultInfo= ResultInfo.ResponseSuccess(groupList);
+        MyJson.returnJson(resultInfo,resp);
+        System.out.println("查询群流程结束");
     }
 
 

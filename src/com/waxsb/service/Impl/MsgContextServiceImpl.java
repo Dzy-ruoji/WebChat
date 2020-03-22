@@ -145,4 +145,29 @@ public class MsgContextServiceImpl implements MsgContextService {
             JDBCUtils.closeResource(conn,null);
         }
     }
+
+    @Override
+    public List<SocketMsg> findContacts(String username) {
+        Connection conn = JDBCUtils.getConnection();
+        try {
+            conn.setAutoCommit(false);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            List<SocketMsg> soc = dao.findContacts(conn,username);
+            conn.commit();
+            return soc;
+        } catch (Exception e) {
+            try {
+                conn.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+            e.printStackTrace();
+        } finally {
+            JDBCUtils.closeResource(conn,null);
+        }
+        return null;
+    }
 }

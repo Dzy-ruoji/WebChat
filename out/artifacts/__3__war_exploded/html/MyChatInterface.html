@@ -6,8 +6,8 @@
 </head>
 <link rel="stylesheet" href="../css/1.css">
 <link rel="stylesheet" href="../css/chat.css">
-<link rel="stylesheet" href="../css/reset.css">
-<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/page.css">
+
 <body>
     <div class="whole">
         <div class="applicationList">
@@ -20,11 +20,11 @@
             </div>
     
             <div class="function">
-                <span id="mesID" >消息通知
-                    <span class="many" id="manySpan">95</span>
-                    </span>
-                <span id="connectsID" class="selected" onclick="getMyFriends()">联系人</span>
-                <span id="groupsID" onclick="getMyGroups()"  style="border-right: 0;">群聊</span>
+                <span id="mesID" onclick="FnewMsg()" >消息通知
+                    <span  id="manySpan" class="many"> </span>
+                </span>
+                <span id="connectsID" class="selected" onclick="FgetMyFriends()">联系人</span>
+                <span id="groupsID" onclick="FgetMyGroups()"  style="border-right: 0;">群聊</span>
             </div>
 
           <div class="ContactList" id="ContactListDiv">
@@ -92,7 +92,6 @@
 
     </div>
 
-
     <!--添加好友列表-->
     <div id="test" style="width: 1200px;margin-left: 345px;margin-top: 0px;position: absolute;top: 90px;background-color: lightblue;height: 550px;">
         <style>
@@ -105,14 +104,19 @@
                 <button onclick="document.getElementById('test').style.display='none';" class="searchButton" style="border: 1px solid red;font-size: 18px">关闭</button></h2>
             <form action="" method="" class="clearfix">
                 <div class="inleft">
-                    <strong>用户名</strong> <input type="text" id="username">
+                    <strong>查询用户</strong> <input type="text" id="username">
                     <button id="search">查询</button>
+                </div>
+
+                <div class="inleft">
+                    <strong>查询群组</strong> <input type="text" id="groupname">
+                    <button id="searchgroup">查询</button>
                 </div>
 
             </form>
         </div>
         <!-- 数据展示 开始-->
-        <div class="read">
+        <div class="read" id="read">
             <div class="top" id="dataTable">
                 <ul class="clearfix" id="lif" >
                     <li>
@@ -150,7 +154,7 @@
         </div>
         <!-- 分页条 结束-->
     </div>
-    <script src="../js/MyChatInterface.js"></script>
+    <script src="../js/MyChat.js"></script>
 </body>
 </html>
 <script>

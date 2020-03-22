@@ -227,4 +227,29 @@ public class FriendServiceImpl implements FriendService {
 
     }
 
+    @Override
+    public String findNickname(String myName, String friendName) {
+        Connection conn = JDBCUtils.getConnection();
+        try {
+            conn.setAutoCommit(false);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            String nickname = dao.findNickname(conn,myName, friendName);
+            conn.commit();
+            return nickname;
+        } catch (SQLException e) {
+            try {
+                conn.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+            e.printStackTrace();
+        } finally {
+            JDBCUtils.closeResource(conn, null);
+        }
+        return null;
+    }
+
 }

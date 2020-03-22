@@ -86,6 +86,16 @@ public class FriendDaoImpl implements FriendDao {
         baseDao.update(conn,sql,myName,friendName,myName,friendName,nickname,nickname);
     }
 
+    @Override
+    public String findNickname(Connection conn,String myName, String friendName) throws SQLException {
+        String sql =" SELECT `friendNickname_1` FROM\n" +
+                "(SELECT friendNickname_2 AS `friendNickname_1` FROM `t_friend` WHERE friend_1 = ? AND friend_2 = ?" +
+                "UNION\n" +
+                "SELECT`friendNickname_1` AS `friendNickname_1` FROM `t_friend` WHERE friend_1 = ? AND friend_2 = ?" +
+                "   ) t1 ";
+        return baseDao.getValue(conn,sql,myName,friendName,friendName,myName);
+    }
+
 
 }
 

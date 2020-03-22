@@ -25,4 +25,6 @@ public interface FriendDao {
     void deleteMyFriend(Connection conn,String myName , String friendName) throws SQLException;
 
     void updateNickname(Connection conn,String myName, String friendName, String nickname) throws SQLException;
+
+    String findNickname(Connection conn, String myName, String friendName) throws SQLException;
 }

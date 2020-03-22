@@ -23,4 +23,6 @@ public interface FriendService {
     void deleteMyFriend(String myName,String friendName);
 
     void updateNickname(String myName, String friendName, String nickname);
+
+    String findNickname(String myName, String friendName);
 }

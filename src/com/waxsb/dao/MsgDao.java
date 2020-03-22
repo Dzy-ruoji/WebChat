@@ -20,4 +20,6 @@ public interface MsgDao {
     List<SocketMsg> findPrivateMsg(Connection conn, int start, int rows, String fromUser, String toUser, Date date) throws SQLException, InstantiationException, IllegalAccessException, NoSuchFieldException;
 
     void deleteMsg(Connection conn);
+
+    List<SocketMsg> findContacts(Connection conn, String username) throws SQLException, InstantiationException, IllegalAccessException, NoSuchFieldException;
 }
